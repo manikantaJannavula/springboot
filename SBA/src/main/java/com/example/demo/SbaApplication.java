@@ -15,8 +15,11 @@ public class SbaApplication {
             System.out.println("Tomcat is running on port 8080.");
         } else {
             System.out.println("Tomcat is NOT running.");
-            
-            
         }
+        
+        
+        
+        
+        
     }
 }
