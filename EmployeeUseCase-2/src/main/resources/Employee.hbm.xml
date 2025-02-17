@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">    
+<hibernate-mapping>
+    <class name="com.wipro.springboot.usecase2.Employee" table="Employee">
+        <!-- id property with auto-increment mapping -->
+        <id name="id" column="id">
+            <generator class="increment"/>
+        </id>
+
+        <!-- name property mapping -->
+        <property name="name" column="name" type="string"/>
+
+        <!-- role property mapping -->
+        <property name="role" column="role" type="string"/>
+
+        <!-- designation property mapping -->
+        <property name="designation" column="designation" type="string"/>
+
+        <!-- salary property mapping -->
+        <property name="salary" column="salary" type="double"/>
+    </class>
+</hibernate-mapping>
