@@ -1,0 +1,174 @@
+/* Main Container */
+.container {
+    max-width: 850px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    margin: 40px 0 40px 20px; /* Changed margin to move container left */
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    float: left; /* Added float to ensure it aligns left */
+  }
+  
+  /* Hover Effect for Container */
+  .container:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+    transform: scale(1.02);
+  }
+  
+  /* Heading Styling */
+  h2 {
+    color: #004085;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Bar Styling */
+  input.form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Search Bar Hover and Focus */
+  input.form-control:hover,
+  input.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* Table Styling */
+  .table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Table Header */
+  .table th {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 18px;
+  }
+  
+  /* Table Cell Styling */
+  .table td,
+  .table th {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+    white-space: nowrap;
+  }
+  
+  /* Adjusting Column Widths to Add Space Between Name & Actions */
+  
+  /* Name Column - Slightly Increased */
+  .table th:first-child {
+    width: 40%;
+    padding-right: 20px;
+  }
+  
+  /* Actions Column - Reduced */
+  .table th:last-child {
+    width: 15%;
+    padding-left: 20px;
+  }
+  
+  /* Ensuring Buttons Stay in Position Inside Actions Column */
+  .action-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+  
+  /* Button Spacing */
+  td > button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  
+  /* Button Styles */
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  /* View Button */
+  .btn-info {
+    background-color: #17a2b8;
+    border: none;
+  }
+  
+  .btn-info:hover {
+    background-color: #138496;
+    transform: scale(1.05);
+  }
+  
+  /* Edit Button */
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Delete Button */
+  .btn-danger {
+    background-color: #dc3545;
+    border: none;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+  }
+  
+  /* Add Product Button - **Reduced Size** */
+  .btn-success {
+    width: 30%;
+    max-width: 150px;
+    padding: 8px;
+    font-size: 13px;
+    display: block;
+    margin: 10px auto;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  
+  /* Error Message */
+  .alert-danger {
+    font-size: 14px;
+    font-weight: bold;
+    color: #a30000;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  

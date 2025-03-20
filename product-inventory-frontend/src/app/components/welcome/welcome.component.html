@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <h2>Welcome to Product Inventory</h2>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  <div class="mb-3">
+    <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Search...">
+  </div>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of filteredProducts">
+          <td>{{ product.name }}</td>
+          <td>
+            <button class="btn btn-sm btn-info me-1" (click)="viewProduct(product.id)">View</button>
+            <button class="btn btn-sm btn-primary me-1" (click)="editProduct(product.id)" [disabled]="!authService.isLoggedIn()">Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="deleteProduct(product.id)" [disabled]="!authService.isLoggedIn()">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="btn btn-success" (click)="addProduct()" [disabled]="!authService.isLoggedIn()">Add Product</button>
+</div>

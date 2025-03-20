@@ -1,0 +1,19 @@
+footer {
+    background: linear-gradient(to right, #1b2a49, #162447, #1f4068); /* Same dark gradient as navbar */
+    color: white; /* Same text color as navbar */
+    text-align: center;
+    padding: 15px; /* Same padding as navbar */
+    font-size: 16px; /* Same font size */
+    width: 100%; /* Full width */
+    height: 60px; /* Same height as navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+    
+    /*** Fix footer at bottom ***/
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  

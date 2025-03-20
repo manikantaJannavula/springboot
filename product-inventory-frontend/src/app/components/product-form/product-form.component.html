@@ -1,0 +1,62 @@
+<div class="container mt-5">
+  <h2>{{ isAddMode ? 'Add Product' : 'Update Product' }}</h2>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" formControlName="name"
+             [class.is-invalid]="productForm.get('name')?.invalid && productForm.get('name')?.touched">
+      <div *ngIf="productForm.get('name')?.hasError('required') && productForm.get('name')?.touched"
+           class="invalid-feedback">
+        Enter product name
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea class="form-control" id="description" formControlName="description"
+                [class.is-invalid]="productForm.get('description')?.invalid && productForm.get('description')?.touched"></textarea>
+      <div *ngIf="productForm.get('description')?.hasError('required') && productForm.get('description')?.touched"
+           class="invalid-feedback">
+        Enter product description
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="manufacturer" class="form-label">Manufacturer</label>
+      <input type="text" class="form-control" id="manufacturer" formControlName="manufacturer"
+             [class.is-invalid]="productForm.get('manufacturer')?.invalid && productForm.get('manufacturer')?.touched">
+      <div *ngIf="productForm.get('manufacturer')?.hasError('required') && productForm.get('manufacturer')?.touched"
+           class="invalid-feedback">
+        Enter manufacturer name
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input type="number" class="form-control" id="price" formControlName="price"
+             [class.is-invalid]="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+      <div *ngIf="productForm.get('price')?.hasError('required') && productForm.get('price')?.touched"
+           class="invalid-feedback">
+        Enter product price
+      </div>
+      <div *ngIf="productForm.get('price')?.hasError('min') && productForm.get('price')?.touched"
+           class="invalid-feedback">
+        Enter valid price
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="quantity" class="form-label">Quantity</label>
+      <input type="number" class="form-control" id="quantity" formControlName="quantity"
+             [class.is-invalid]="productForm.get('quantity')?.invalid && productForm.get('quantity')?.touched">
+      <div *ngIf="productForm.get('quantity')?.hasError('required') && productForm.get('quantity')?.touched"
+           class="invalid-feedback">
+        Enter product quantity
+      </div>
+      <div *ngIf="productForm.get('quantity')?.hasError('min') && productForm.get('quantity')?.touched"
+           class="invalid-feedback">
+        Enter valid quantity
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">
+      {{ isAddMode ? 'Add Product' : 'Update Product' }}
+    </button>
+  </form>
+</div>

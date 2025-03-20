@@ -1,0 +1,62 @@
+<div class="container mt-5">
+  <h2>Register</h2>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" formControlName="email"
+             [class.is-invalid]="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+      <div *ngIf="registerForm.get('email')?.hasError('required') && registerForm.get('email')?.touched"
+           class="invalid-feedback">Email is required</div>
+      <div *ngIf="registerForm.get('email')?.hasError('email') && registerForm.get('email')?.touched"
+           class="invalid-feedback">Invalid email format</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="password"
+             [class.is-invalid]="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+      <div *ngIf="registerForm.get('password')?.hasError('required') && registerForm.get('password')?.touched"
+           class="invalid-feedback">Password is required</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="firstName" formControlName="firstName"
+             [class.is-invalid]="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
+      <div *ngIf="registerForm.get('firstName')?.hasError('required') && registerForm.get('firstName')?.touched"
+           class="invalid-feedback">First Name is required</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="lastName" formControlName="lastName"
+             [class.is-invalid]="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
+      <div *ngIf="registerForm.get('lastName')?.hasError('required') && registerForm.get('lastName')?.touched"
+           class="invalid-feedback">Last Name is required</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="location" class="form-label">Location</label>
+      <input type="text" class="form-control" id="location" formControlName="location"
+             [class.is-invalid]="registerForm.get('location')?.invalid && registerForm.get('location')?.touched">
+      <div *ngIf="registerForm.get('location')?.hasError('required') && registerForm.get('location')?.touched"
+           class="invalid-feedback">Location is required</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="mobileNumber" class="form-label">Mobile Number</label>
+      <input type="text" class="form-control" id="mobileNumber" formControlName="mobileNumber"
+             [class.is-invalid]="registerForm.get('mobileNumber')?.invalid && registerForm.get('mobileNumber')?.touched">
+      <div *ngIf="registerForm.get('mobileNumber')?.hasError('required') && registerForm.get('mobileNumber')?.touched"
+           class="invalid-feedback">Mobile Number is required</div>
+      <div *ngIf="registerForm.get('mobileNumber')?.hasError('pattern') && registerForm.get('mobileNumber')?.touched"
+           class="invalid-feedback">Mobile number must start with 6, 7, 8, or 9 and be exactly 10 digits long</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">
+      Register
+    </button>
+  </form>
+</div>

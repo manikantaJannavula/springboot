@@ -1,0 +1,110 @@
+/* Center the login form on the page */
+.container {
+    max-width: 350px; /* Small length */
+    background-color: #ffffff; /* White background */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 80px auto; /* Centers the box */
+    text-align: center;
+    transition: 0.3s ease-in-out; /* Smooth transition effect */
+  }
+  
+  /* Hover Effect - Light Background */
+  .container:hover {
+    background-color: #f8f9fa; /* Light gray background */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow */
+    transform: scale(1.02); /* Slight zoom effect */
+  }
+  
+  /* Style for the heading */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Form input fields */
+  .form-control {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Form input hover effect */
+  .form-control:hover, .form-control:focus {
+    border-color: #28a745; /* Green border on hover */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* Validation Messages (Same Dark Red as Registration Page) */
+  .invalid-feedback {
+    color: darkred; /* Dark Red */
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    margin-top: -8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the Login button (Green) */
+  .btn-primary {
+    width: 100%;
+    background-color: #28a745; /* Green */
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Login button hover effect */
+  .btn-primary:hover {
+    background-color: #218838; /* Darker Green */
+    transform: scale(1.02); /* Slight zoom effect */
+  }
+  
+  /* Logout button */
+  .btn-danger {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 10px;
+  }
+  
+  /* Logout button hover effect */
+  .btn-danger:hover {
+    background-color: #c82333; /* Darker Red */
+    transform: scale(1.02); /* Slight zoom effect */
+  }
+  
+  /* Alert message styling */
+  .alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Label Styling */
+  .form-label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  

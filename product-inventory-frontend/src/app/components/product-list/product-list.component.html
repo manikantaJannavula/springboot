@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <h2>Product List</h2>
+
+  <div class="mb-3">
+    <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Search...">
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of filteredProducts">
+          <td>{{ product.name }}</td>
+          <td>
+            <button class="btn btn-sm btn-info me-1" (click)="viewProduct(product.id)">View</button>
+            <button class="btn btn-sm btn-primary me-1" (click)="editProduct(product.id)">Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="deleteProduct(product.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <button class="btn btn-success" (click)="addProduct()">Add Product</button>
+</div>
